@@ -9,7 +9,7 @@ class TestLogin(unittest.TestCase):
     def setUp(self): 
         self.browser = webdriver.Chrome(ChromeDriverManager().install())
         
-    def test_a_success_login(self): 
+    def test__login(self): 
         # steps
         browser = self.browser #buka web browser
         browser.get("http://www.saucedemo.com/")
@@ -21,7 +21,7 @@ class TestLogin(unittest.TestCase):
         browser.find_element(By.ID,"login-button").click()
         time.sleep(1)
         
-    def test_a_success_logout(self): 
+    def test_logout(self): 
         # steps
         browser = self.browser #buka web browser
         browser.get("http://www.saucedemo.com/")
@@ -37,7 +37,7 @@ class TestLogin(unittest.TestCase):
         browser.find_element(By.ID,"logout_sidebar_link").click()
         time.sleep(1)
         
-    def test_a_emptylogin(self): 
+    def test_emptylogin(self): 
         # steps
         browser = self.browser #buka web browser
         browser.get("http://www.saucedemo.com/")
