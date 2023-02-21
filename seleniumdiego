@@ -1,8 +1,9 @@
-import time
 import unittest
+import time
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
+from webdriver_manager.chrome import ChromeDriverManager
 
 class TestLogin(unittest.TestCase): 
 
@@ -12,7 +13,7 @@ class TestLogin(unittest.TestCase):
     #login
     def login(self):
         browser = self.browser #buka web browser
-        browser.get("https://www.saucedemo.com/")
+        browser.get("http://www.saucedemo.com/")
         time.sleep(3)
         browser.find_element(By.NAME, 'user-name').send_keys('standard_user')
         time.sleep(2)
@@ -24,7 +25,7 @@ class TestLogin(unittest.TestCase):
     #logout
     def login(self):
         browser = self.browser #buka web browser
-        browser.get("https://www.saucedemo.com/")
+        browser.get("http://www.saucedemo.com/")
         time.sleep(3)
         browser.find_element(By.NAME, 'user-name').send_keys('standard_user')
         time.sleep(2)
@@ -40,7 +41,7 @@ class TestLogin(unittest.TestCase):
     #login tanpa email dan password
     def login(self):
         browser = self.browser #buka web browser
-        browser.get("https://www.saucedemo.com/")
+        browser.get("http://www.saucedemo.com/")
         time.sleep(3)
         browser.find_element(By.NAME, 'user-name').send_keys('standard_user')
         time.sleep(2)
